@@ -1,0 +1,41 @@
+<view class='btn_box' wx:if="{{is_author||is_admin||is_root}}">
+  <button class="save_btn" bindtap="downloadRoster">下载名单</button>
+  <button class="save_btn" bindtap="uploadNumber">上传号码</button>
+  <button class="save_btn" bindtap="uploadResult">上传成绩</button>
+</view>
+
+<view wx:if="{{is_author||is_admin||is_root}}">
+  <progress percent="{{progress}}" active='{{progress==0}}' stroke-width="3"/>
+</view>
+
+<view class='hdr_box'>
+  <view class='idx_hdr'>#</view>
+  <view class='name_hdr' bindtap="sortByName">姓名</view>
+  <view class='sex_hdr' bindtap="sortBySex">性别</view>
+  <view class='project_hdr' bindtap="sortByProject">参赛项目</view>
+  <view class='number_hdr'>参赛号码</view>
+</view>
+
+<view class="none_participate_tips" wx:if="{{roster.length==0}}">
+    {{tips}}
+</view>
+
+<view wx:for="{{roster}}" wx:for-index="i">
+  <view class="item_box" data-matchid="{{item.openid}}" bindtap="">
+    <view class='idx_text'>{{i+1}}</view>
+    <view class='name_text' bindtap="">{{item.name}}</view>
+    <view class='sex_text' bindtap="">{{item.sex}}</view>
+    <view class='project_text' bindtap="">{{(!item.project || item.project=='')?'-':item.project}}</view>
+    <view class='project_text' bindtap="">{{(!item.number || item.number=='')?'-':item.number}}</view>
+  </view>
+</view>
+
+<view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modalDlg" catchtouchmove="preventTouchMove"  wx:if="{{showModal}}">
+    <view class="modalContent">
+      <text class="dlg_text">{{modalTips}}</text>
+      <textarea class="dlg_textarea" maxlength="500" value="{{modalContent}}"/>
+    </view>
+    <button class="dlg_copy_btn" bindtap="copyText">复制</button>
+    <button class="dlg_close_btn" bindtap="closeModal">关闭</button>
+</view>

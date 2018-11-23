@@ -1,0 +1,7 @@
+<view class="new_container" wx:if="{{type < 4}}">
+    <text class="plaintext">{{content}}</text>
+</view>
+
+<view wx:if="{{type == 4}}">
+  <image class="img" mode="widthFix" src="{{img_url}}" bindtap="previewImage"></image>
+</view>

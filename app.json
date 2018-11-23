@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/activity/activity",
+    "pages/create/create",
+    "pages/mine/mine",
+    "pages/about/about",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/oneActivity/oneActivity",
+    "pages/participateActivity/participateActivity",
+    "pages/activityRoster/activityRoster",
+    "pages/certificate/certificate"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#9F79EE",
+    "navigationBarTitleText": "THURUN",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#FFFFFF",
+    "height": "300rpx",
+    "selectedColor": "#FFFF00",
+    "borderStyle": "#9F79EE",
+    "backgroundColor": "#9F79EE",
+    "list": [
+      {
+        "pagePath": "pages/activity/activity",
+        "text": "活动列表",
+        "iconPath": "images/tab_activity.png",
+        "selectedIconPath": "images/tab_activity_selected.png"
+      },
+      {
+        "pagePath": "pages/create/create",
+        "text": "创建活动",
+        "iconPath": "images/tab_create.png",
+        "selectedIconPath": "images/tab_create_selected.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "个人主页",
+        "iconPath": "images/tab_mine.png",
+        "selectedIconPath": "images/tab_mine_selected.png"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "联系我哟",
+        "iconPath": "images/tab_about.png",
+        "selectedIconPath": "images/tab_about_selected.png"
+      }
+    ]
+  }
+}

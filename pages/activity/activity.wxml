@@ -1,0 +1,32 @@
+<view class="none_activity_tips" wx:if="{{activity_list.length==0}}">
+    {{tips}}
+</view>
+
+<view wx:for="{{activity_list}}">
+  <view class="item_box" data-matchid="{{item.activity_id}}" data-matchname="{{item.activityName}}" bindtap="showActivity">
+    <view class="image_area">
+      <image wx:if="{{item.activityTag == '长跑节'}}" src="../../images/changpaojie.jpg"></image>
+      <image wx:elif="{{item.activityTag == '拉练'}}" src="../../images/lalian.jpg"></image>
+      <image wx:else src="../../images/tag.jpg"></image>
+    </view>
+
+    <view class="text_area">
+      <view class="line">
+        <text class="title">{{item.activityName}}</text>
+      </view>
+
+      <view class="line">
+        <text class="description">{{item.activityDay}} {{item.activityTime}}</text>
+        <text class="description" wx:if="{{false}}"> {{item.activityAddress==''?'地点待定':item.activityAddress}}</text>
+      </view>
+
+    </view>
+  </view>
+</view>
+
+
+<view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modalDlg" catchtouchmove="preventTouchMove"  wx:if="{{showModal}}">
+    <text>欢迎来到模态对话框</text>
+    <button bindtap="closeModal">点我可以关掉对话框</button>
+</view>

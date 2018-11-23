@@ -1,0 +1,137 @@
+.none_participate_tips {
+  margin: 100rpx;
+  text-align: center; 
+  font-family: '微软雅黑'
+}
+
+.save_btn {
+  margin-left: 3%;
+  width: 29%;
+  float: left;
+  background-color:#f8f8f8;
+}
+
+.btn_box {
+  padding-top: 10px;
+}
+
+.btn_box, .hdr_box, .item_box {
+  height: 90rpx;
+  background-color:#fff;
+}
+
+.idx_hdr, .idx_text {
+  width: 10%;
+}
+
+.name_hdr, .name_text {
+  width: 18%;
+}
+
+.sex_hdr, .sex_text {
+  width: 15%;
+}
+
+.project_hdr, .project_text {
+  width: 18%;
+}
+
+.number_hdr, .number_text {
+  width: 18%;
+}
+
+.idx_hdr, .name_hdr, .sex_hdr, .project_hdr, .number_hdr {
+  margin-left: 3%;
+  float: left;
+  text-align: left;
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 28rpx;
+  color:#333;
+  font-weight: bold;
+}
+
+.idx_text, .name_text, .sex_text, .project_text, .number_text {
+  margin-left: 3%;
+  margin-top: 15rpx;
+  float: left;
+  text-align: left;
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 28rpx;
+  color:#333;
+}
+
+/*****************************************/
+
+.mask{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  z-index: 9000;
+  opacity: 0.7;
+}
+ 
+.modalDlg {
+  margin-left: 5%;
+  width: 90%;
+  height: 60%;
+  top: 10%;
+  position: fixed;
+  z-index: 9999;
+  background-color: #fff;
+}
+
+.modalContent {
+    left: 10%;
+    width: 80%;
+    height: 40%;
+    top: 13%;
+    position: fixed;
+    background-color: #fff;
+}
+
+.dlg_text {
+  width: 80%;
+  position: relative;
+  line-height: 50rpx;
+  text-align: justify;
+  text-align-last: left;
+  color: #888;
+}
+
+.dlg_textarea {
+  margin-top: 20rpx;
+  width: 100%;
+  position: relative;
+  word-wrap: break-word;
+  word-break: break-all;
+  max-lines: 8;
+  background-color: #eee;
+  color: #888;
+}
+
+.dlg_copy_btn {
+  left: 30%;
+  top: 60%;
+  position: fixed;
+  background-color: #9F79EE;
+  color: #fff;
+  display: inline-block;
+  line-height: 60rpx;
+  float: none
+}
+
+.dlg_close_btn {
+  left: 55%;
+  top: 60%;
+  position: fixed;
+  background-color: #9F79EE;
+  color: #fff;
+  display: inline-block;
+  line-height: 60rpx;
+  float: none
+}

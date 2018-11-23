@@ -1,0 +1,185 @@
+<view class="sim-form">
+  <view class="sim-form-group" wx:if="{{json_names['name']}}">
+    <label>姓名:</label>
+    <input placeholder="请输入姓名" bindinput="nameInput" value="{{name}}" disabled="{{disabled}}"/>
+  </view>
+
+  <view class="sim-form-group" wx:if="{{json_names['sex']}}">
+    <label>性别:</label>
+    <picker value="{{sex_idx}}" range="{{sexs}}" bindchange="sexChange" disabled="{{disabled}}">
+      <view class="picker"> {{sexs[sex_idx]}} </view>
+    </picker>
+  </view>
+
+  <view class="sim-form-group" wx:if="{{json_names['phone']}}">
+    <label>手机:</label>
+    <input placeholder="请输入手机号码" bindinput="phoneInput" value="{{phone}}" disabled="{{disabled}}"/>
+  </view>
+
+  <view class="sim-form-group" wx:if="{{json_names['project']}}">
+    <label>项目:</label>
+    <picker value="{{project_idx}}" range="{{projects}}" bindchange="projectChange" disabled="{{disabled}}">
+      <view class="picker"> {{projects[project_idx]}} </view>
+    </picker>
+  </view>
+
+  <view class="sim-form-group" wx:if="{{json_names['identity']}}">
+    <label>身份证:</label>
+    <input placeholder="请输入身份证" bindinput="identityInput" value="{{identity}}" disabled="{{disabled}}"/>
+  </view>
+
+  <view class="sim-form-group" wx:if="{{json_names['card_type']}}">
+    <label>证件类型:</label>
+    <picker value="{{card_type_idx}}" range="{{card_types}}" bindchange="card_typeChange" disabled="{{disabled}}">
+      <view class="picker"> {{card_types[card_type_idx]}} </view>
+    </picker>
+  </view>
+
+  <view class="sim-form-group" wx:if="{{json_names['card_id']}}">
+    <label>证件号码:</label>
+    <input placeholder="请输入证件号码" bindinput="card_idInput" value="{{card_id}}" disabled="{{disabled}}"/>
+  </view>
+
+  <view class="sim-form-group" wx:if="{{json_names['country']}}">
+    <label>国籍:</label>
+    <input placeholder="请输入国籍" bindinput="countryInput" value="{{country}}" disabled="{{disabled}}"/>
+  </view>
+
+  <view class="sim-form-group" wx:if="{{json_names['school']}}">
+    <label>学校:</label>
+    <input placeholder="请输入学校" bindinput="schoolInput" value="{{school}}" disabled="{{disabled}}"/>
+  </view>
+
+  <view class="sim-form-group" wx:if="{{json_names['stu_id']}}">
+    <label>学号:</label>
+    <input placeholder="请输入学号" bindinput="stu_idInput" value="{{stu_id}}" disabled="{{disabled}}"/>
+  </view>
+
+  <view class="sim-form-group" wx:if="{{json_names['enter_school']}}">
+    <label>入学年份:</label>
+    <picker mode="date" fields="year" value="{{enter_school}}" bindchange="enter_schoolChange" disabled="{{disabled}}">
+      <view class="picker">
+        {{enter_school}}
+      </view>
+    </picker>
+  </view>
+
+  <view class="sim-form-group" wx:if="{{json_names['department']}}">
+    <label>院系:</label>
+    <input placeholder="请输入院系" bindinput="departmentInput" value="{{department}}" disabled="{{disabled}}"/>
+  </view>
+
+  <view class="sim-form-group" wx:if="{{json_names['major']}}">
+    <label>专业:</label>
+    <input placeholder="请输入专业" bindinput="majorInput" value="{{major}}" disabled="{{disabled}}"/>
+  </view>
+
+  <view class="sim-form-group" wx:if="{{json_names['education']}}">
+    <label>学历:</label>
+    <picker value="{{education_idx}}" range="{{educations}}" bindchange="educationChange" disabled="{{disabled}}">
+      <view class="picker"> {{educations[education_idx]}} </view>
+    </picker>
+  </view>
+
+  <view class="sim-form-group" wx:if="{{json_names['job']}}">
+    <label>职业:</label>
+    <input placeholder="请输入职业" bindinput="jobInput" value="{{job}}" disabled="{{disabled}}"/>
+  </view>
+
+  <view class="sim-form-group" wx:if="{{json_names['email']}}">
+    <label>邮箱:</label>
+    <input placeholder="请输入邮箱" bindinput="emailInput" value="{{email}}" disabled="{{disabled}}"/>
+  </view>
+
+  <view class="sim-form-group" wx:if="{{json_names['address']}}">
+    <label>通讯地址:</label>
+    <input placeholder="请输入通讯地址" bindinput="addressInput" value="{{address}}" disabled="{{disabled}}"/>
+  </view>
+
+  <view class="sim-form-group" wx:if="{{json_names['birth']}}">
+    <label>出生日期:</label>
+    <picker mode="date" value="{{birth}}" bindchange="birthChange" disabled="{{disabled}}">
+      <view class="picker">
+        {{birth}}
+      </view>
+    </picker>
+  </view>
+
+  <view class="sim-form-group" wx:if="{{json_names['blood']}}">
+    <label>血型:</label>
+    <picker value="{{blood_idx}}" range="{{bloods}}" bindchange="bloodChange" disabled="{{disabled}}">
+      <view class="picker"> {{bloods[blood_idx]}} </view>
+    </picker>
+  </view>
+
+  <view class="sim-form-group" wx:if="{{json_names['body_height']}}">
+    <label>身高:</label>
+    <input placeholder="请输入身高（cm）" bindinput="body_heightInput" value="{{body_height}}" disabled="{{disabled}}"/>
+  </view>
+
+  <view class="sim-form-group" wx:if="{{json_names['body_weight']}}">
+    <label>体重:</label>
+    <input placeholder="请输入体重（kg）" bindinput="body_weightInput" value="{{body_weight}}" disabled="{{disabled}}"/>
+  </view>
+
+  <view class="sim-form-group" wx:if="{{json_names['cloth_size']}}">
+    <label>衣服尺码:</label>
+    <picker value="{{cloth_size_idx}}" range="{{cloth_sizes}}" bindchange="cloth_sizeChange" disabled="{{disabled}}">
+      <view class="picker"> {{cloth_sizes[cloth_size_idx]}} </view>
+    </picker>
+  </view>
+
+  <view class="sim-form-group" wx:if="{{json_names['shoe_size']}}">
+    <label>鞋子尺码:</label>
+    <picker value="{shoe_size_idx}}" range="{{shoe_sizes}}" bindchange="shoe_sizeChange" disabled="{{disabled}}">
+      <view class="picker"> {{shoe_sizes[shoe_size_idx]}} </view>
+    </picker>
+  </view>
+
+  <view class="sim-form-group" wx:if="{{json_names['history']}}">
+    <label>病史:</label>
+    <input placeholder="请输入病史" bindinput="historyInput" value="{{history}}" disabled="{{disabled}}"/>
+  </view>
+
+  <view class="sim-form-group" wx:if="{{json_names['leader']}}">
+    <label>队长姓名:</label>
+    <input placeholder="请输入队长姓名" bindinput="leaderInput" value="{{leader}}" disabled="{{disabled}}"/>
+  </view>
+
+  <view class="sim-form-group" wx:if="{{json_names['pb']}}">
+    <label>最好成绩:</label>
+    <input placeholder="请输入最好成绩" bindinput="pbInput" value="{{pb}}" disabled="{{disabled}}"/>
+  </view>
+
+  <view class="sim-form-group" wx:if="{{json_names['pb_activity']}}">
+    <label>最好成绩比赛:</label>
+    <input placeholder="请输入最好成绩比赛" bindinput="pb_activityInput" value="{{pb_activity}}" disabled="{{disabled}}"/>
+  </view>
+
+  <view class="sim-form-group" wx:if="{{json_names['contact_man']}}">
+    <label>紧急联系人:</label>
+    <input placeholder="请输入紧急联系人" bindinput="contact_manInput" value="{{contact_man}}" disabled="{{disabled}}"/>
+  </view>
+
+  <view class="sim-form-group" wx:if="{{json_names['contact_phone']}}">
+    <label>紧急联系号码:</label>
+    <input placeholder="请输入紧急联系号码" bindinput="contact_phoneInput" value="{{contact_phone}}" disabled="{{disabled}}"/>
+  </view>
+
+  <view class="sim-form-group" wx:if="{{json_names['attach']}}">
+    <label>附件:</label>
+    <input placeholder="暂不支持附件功能" bindinput="attachInput" value="{{attach}}" disabled="{{disabled}}"/>
+  </view>
+
+  <view class="sim-form-group" wx:if="{{json_names['remark']}}">
+    <label>备注:</label>
+    <input placeholder="请输入备注" bindinput="remarkInput" value="{{remark}}" disabled="{{disabled}}"/>
+  </view>
+
+  <view>
+    <button class="sim-btn sim-btn-info" wx:if="{{!disabled&&!expired}}" bindtap="submitParticipate">提交报名信息</button>
+    <button class="sim-btn sim-btn-info" wx:if="{{disabled&&!expired}}" bindtap="editParticipate">修改报名信息</button>
+    <button class="sim-btn sim-btn-info" wx:if="{{!is_first&&!expired}}" bindtap="deleteParticipate">删除报名信息</button>
+  </view>
+  
+</view>

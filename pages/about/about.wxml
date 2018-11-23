@@ -1,0 +1,6 @@
+<view class="new_container">
+    <image bindtap="bindViewTap" class="userinfo-avatar" src="../../images/about.jpg" mode="cover"></image>
+    <text class="userinfo-nickname">弃撩的小伟</text>
+    <text class="userinfo-nickname">lwz17@mails.tsinghua.edu.cn</text>
+    <button class="sim-btn sim-btn-info" bindtap="clearAll">清空所有数据</button>
+</view>

@@ -1,0 +1,98 @@
+<view class="new_container" wx:if="{{!is_root&&!is_admin}}">
+    <text class="no_access_tips">{{no_access_tips}}</text>
+    <textarea class="openid" value="{{openid_aes}}"/>
+    <button class="copy_btn" bindtap="copyText">复制代码</button>
+</view>
+
+<view class="sim-form" wx:if="{{is_root||is_admin}}">
+  <view class="sim-form-group">
+    <label>活动名称:</label>
+    <input placeholder="请输入活动名称" bindinput="activityNameInput" value="{{activityName}}"/>
+  </view>
+
+  <view class="sim-form-group">
+    <label>活动标签:</label>
+    <picker value="{{tag_idx}}" range="{{activityTags}}" bindchange="activityTagsChange">
+      <view class="picker"> {{activityTags[tag_idx]}} </view>
+    </picker>
+  </view>
+
+  <view class="sim-form-group">
+    <label>活动项目:</label>
+    <input placeholder="请输入不同项目，用逗号分隔" bindinput="activityProjectInput" value="{{activityProject}}"/>
+  </view>
+
+  <view class="sim-form-group">
+    <label>活动地点:</label>
+    <input placeholder="请输入活动地点" bindinput="activityAddressInput" value="{{activityAddress}}"/>
+  </view>
+
+  <view class="sim-form-group">
+    <label>活动时间:</label>
+    <picker mode="date" value="{{activityDay}}" bindchange="activityDayChange">
+      <view class="picker">
+        {{activityDay}}
+      </view>
+    </picker>
+    <text decode="{{true}}">&nbsp;</text>
+    <picker mode="time" value="{{activityTime}}" bindchange="activityTimeChange">
+      <view class="picker">
+        {{activityTime}}
+      </view>
+    </picker>
+  </view>
+
+  <view class="sim-form-group">
+    <label>活动描述:</label>
+    <text decode="{{true}}">\n\n</text>
+    <textarea placeholder="请输入活动描述" maxlength="10000" bindinput="activityDescriptionInput" value="{{activityDescription}}"/>
+  </view>
+
+  <view class="sim-form-group">
+    <label>报名信息:</label>
+    <checkbox-group bindchange="infoCheckboxChange">
+      <label wx:for="{{info_items}}" wx:for-index="idx" wx:for-item="item">
+        <checkbox value="{{item.name}}" checked="{{item.checked}}"/>
+        <text>{{item.value}}</text>
+        <text decode="{{true}}">&nbsp;&nbsp;&nbsp;</text>
+        <text decode="{{true}}" wx:if="{{ idx < 27 && (idx + 1) % 3 == 0}}">\n\n</text>
+        <text decode="{{true}}" wx:if="{{ idx >= 27 && idx % 2 == 0}}">\n\n</text>
+      </label>
+    </checkbox-group>
+  </view>
+
+  <view class="sim-form-group">
+    <label>开始报名时间:</label>
+    <picker mode="date" value="{{startEnterDay}}" bindchange="startEnterDayChange">
+      <view class="picker">
+        {{startEnterDay}}
+      </view>
+    </picker>
+    <text decode="{{true}}">&nbsp;</text>
+    <picker mode="time" value="{{startEnterTime}}" bindchange="startEnterTimeChange">
+      <view class="picker">
+        {{startEnterTime}}
+      </view>
+    </picker>
+  </view>
+
+  <view class="sim-form-group">
+    <label>截止报名时间:</label>
+    <picker mode="date" value="{{stopEnterDay}}" bindchange="stopEnterDayChange">
+      <view class="picker">
+        {{stopEnterDay}}
+      </view>
+    </picker>
+    <text decode="{{true}}">&nbsp;</text>
+    <picker mode="time" value="{{stopEnterTime}}" bindchange="stopEnterTimeChange">
+      <view class="picker">
+        {{stopEnterTime}}
+      </view>
+    </picker>
+  </view>
+
+  <view>
+    <button class="sim-btn sim-btn-info" bindtap="submitCreate">提交</button>
+  </view>
+  
+</view>

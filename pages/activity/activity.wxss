@@ -1,0 +1,94 @@
+.header{
+  background-color: rgb(230,230,230);
+  display:flex;
+  flex-direction: row ;
+  justify-content: space-between;
+  padding: 40rpx 20rpx;
+}
+
+.control{
+  display: flex;
+  font-weight: bold;
+}
+
+.fa{
+  font-size:32rpx;
+  vertical-align: bottom;
+}
+
+.sim-modal-container {
+  height: 300rpx;
+  padding: 20px;
+}
+
+.chosen{
+  color: #0BA8F9;
+}
+
+.image_area{
+  width: 135rpx;
+  float: left;
+  overflow: hidden;
+}
+
+.image_area image{
+  width: 90rpx;
+  height:90rpx;
+  margin: 15rpx 25rpx;
+}
+
+.text_area{
+  /*margin-left:100rpx;*/
+  box-sizing: border-box;
+}
+
+.line{
+  margin: 10rpx 0;
+  padding-top: 5rpx;
+  position: relative;
+}
+
+.title{
+  font-weight: bold;
+  font-size:38rpx;
+}
+
+.description {
+  font-size:24rpx;
+  color: rgb(121,121,121);
+}
+
+.item_box{
+  /*position: relative;*/
+  background: rgb(248, 248, 248);
+  height: 120rpx;
+}
+
+.none_activity_tips {
+  margin:100rpx;
+  text-align: center; 
+  font-family: '微软雅黑'
+}
+
+/*****************************************/
+
+.mask{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    z-index: 9000;
+    opacity: 0.7;
+}
+ 
+.modalDlg{
+    width: 80%;
+    height: 60%;
+    top: 100rpx;
+    left: 40rpx;
+    position: fixed;
+    z-index: 9999;
+    background-color: #fff;
+}

@@ -1,0 +1,51 @@
+<view class="sim-form">
+  <view class="sim-form-group">
+    <label>活动名称:</label>
+    <input value="{{activityName}}" disabled="true"/>
+  </view>
+
+  <view class="sim-form-group">
+    <label>活动标签:</label>
+    <input value="{{activityTag}}" disabled="true"/>
+  </view>
+
+  <view class="sim-form-group">
+    <label>活动项目:</label>
+    <input value="{{activityProject}}" disabled="true"/>
+  </view>
+
+  <view class="sim-form-group">
+    <label>活动地点:</label>
+    <input value="{{activityAddress}}" disabled="true"/>
+  </view>
+
+  <view class="sim-form-group">
+    <label>活动时间:</label>
+    <input value="{{activityDay}} {{activityTime}}" disabled="true"/>
+  </view>
+
+  <view class="sim-form-group">
+    <label>活动描述:</label>
+    <text decode="{{true}}">\n\n</text>
+    <textarea value="{{activityDescription}}" maxlength="10000" decode="{{true}}" disabled="true"/>
+  </view>
+
+  <view class="sim-form-group">
+    <label>开始报名:</label>
+    <input value="{{startEnterDay}} {{startEnterTime}}" disabled="true"/>
+  </view>
+
+  <view class="sim-form-group">
+    <label>截止报名:</label>
+    <input value="{{stopEnterDay}} {{stopEnterTime}}" disabled="true"/>
+  </view>
+
+  <view>
+    <button class="sim-btn sim-btn-info" bindtap="participateActivity">报名活动</button>
+    <button class="sim-btn sim-btn-info" bindtap="showActivityCertificate">成绩证书</button>
+    <button class="sim-btn sim-btn-info" wx:if="{{true}}" bindtap="showActivityRoster">活动名单</button>
+    <button class="sim-btn sim-btn-info" wx:if="{{is_author || is_root}}" bindtap="deleteActivity">删除活动</button>
+    <button class="sim-btn sim-btn-info" wx:if="{{is_author || is_root}}" bindtap="editActivity">编辑活动</button>
+  </view>
+  
+</view>
